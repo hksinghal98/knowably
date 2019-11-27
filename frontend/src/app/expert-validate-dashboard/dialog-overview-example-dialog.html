@@ -1,0 +1,26 @@
+<!-- <div *ngFor="let x of data">
+   <p>
+        <mat-form-field appearance="outline" class="demo-full-width">
+          <mat-label>{{x.key}}</mat-label>
+          <input matInput value="{{x.value}}" [readonly]="x.type=='constraint'?editable:!editable" >
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </p>
+</div> -->
+
+<form #expertdata="ngForm" class="form-style-4" (ngSubmit)="onClickSubmit(expertdata.value)">
+  <div *ngFor="let x of data">
+    <label style="color: black">{{x.key}}
+      <input style="color: brown" name="{{x.key | uppercase}}" value="{{x.value}}" [readonly]="x.type=='result'?editable:!editable" ngModel={{x.value}}>
+      <ng-template [ngIf]="x.type=='result'">
+      <select name="status{{x.key}}" ngModel>
+        <option >add</option>
+        <option >delete</option>
+      </select>
+    </ng-template>
+   
+    </label>
+    <br />
+  </div>
+  <input type="submit" class="btn btn-primary" mat-raised-button color="primary"  value="submit" />
+</form>

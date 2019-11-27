@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- 
+<div class="container">
+	<div class="row">
+		<table class="table table-hover table-responsive">
+		    <thead > 
+            <tr>
+
+                 <th *ngFor="let domaindata of domaindata" style="color: black">
+		            {{domaindata.key}}                                                                       
+                </th>
+              </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        </thead>
+		    <tbody>
+		        <tr id="d1">
+		            <td *ngFor="let domaindata of domaindata" id="f1" style="color: black">{{domaindata.value}}</td>
+		            <td><button mat-raised-button color="primary" (click)="openDialog()">edit
+                  <span class="glyphicon glyphicon-pencil"></span></button></td>
+		   		</tr>
+
+		    </tbody>
+		</table>
+	</div>
+</div> -->
+
+
+<div class="card cardstyle " style="width: 20rem">
+	<div class="card-header text-center" style="width: 20rem;color: brown" >
+	  Data to be validated
+	</div>
+	<div class="card-body">
+	  <h5 class="card-title text-center" style="color: black">Domain</h5>
+	  <div *ngFor="let domaindata of domaindata" style="color: black">
+		  
+		<p class="card-text" style="color: black"><span class="text-uppercase" style="color: black">{{domaindata.key}} </span> :  {{domaindata.value}}</p>                                                                    
+	  </div>
+	  
+	  <button class="justify-content-center" mat-raised-button color="primary" (click)="openDialog()">edit<span class="glyphicon glyphicon-pencil"></span></button>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <button class="justify-content-center" mat-raised-button color="primary">close<span class="glyphicon glyphicon-pencil"></span></button>
+
+	</div>
+  </div>
